@@ -1,0 +1,1 @@
+var e={FREE_SHIPPING_THRESHOLD:15e5,DEFAULT_SHIPPING_FEE:35e3},t={GIFT10:{percent:10,label:`Giảm giá 10% cho toàn bộ đơn hàng`},HELLOSUMMER:{percent:15,label:`Ưu đãi chào hè giảm giá 15%`},ANTIGRAVITY:{percent:20,label:`Mã giảm giá đặc biệt từ Antigravity giảm 20%`}},n={BANK_ID:`MB`,ACCOUNT_NUMBER:`0123456789`,ACCOUNT_NAME:`NGUYEN VAN A`};export{n,t as r,e as t};
