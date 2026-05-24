@@ -2180,3 +2180,315 @@ button, input, select, textarea {
   font-size: 0.75rem;
   color: var(--text-muted);
 }
+
+/* ========================================================
+   VIETQR PAYMENT FLOW STYLES
+   ======================================================== */
+.payment-qr-step {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fade-in 0.3s ease;
+}
+
+.back-to-form-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  width: fit-content;
+  transition: var(--transition-smooth);
+}
+.back-to-form-btn:hover {
+  transform: translateX(-4px);
+}
+
+.payment-title {
+  font-size: 1.5rem;
+  margin-top: 4px;
+}
+.payment-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.qr-checkout-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 28px;
+  align-items: flex-start;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.qr-visual-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg-input);
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--glass-shadow);
+}
+
+.qr-neon-border {
+  padding: 10px;
+  background: white;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-primary-border);
+  box-shadow: var(--glow-shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+.qr-neon-border:hover {
+  box-shadow: 0 0 25px var(--color-primary);
+}
+
+.qr-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.qr-status-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+.qr-details-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: var(--bg-input);
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+}
+.qr-details-card h3 {
+  font-size: 1rem;
+}
+.qr-details-warning {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: -6px;
+}
+
+.bank-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bank-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.88rem;
+  border-bottom: 1px dashed var(--border-color);
+  padding-bottom: 8px;
+}
+.bank-detail-row span {
+  color: var(--text-muted);
+}
+.bank-detail-row strong {
+  color: var(--text-heading);
+}
+.bank-detail-row .text-glow-purple {
+  color: var(--color-primary);
+  font-size: 0.95rem;
+}
+.bank-detail-row .text-glow-orange {
+  color: var(--color-accent);
+  font-size: 1rem;
+}
+
+.bank-detail-row.message-row {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  border-bottom: none;
+}
+
+.copyable-message-box {
+  width: 100%;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 0 12px;
+}
+.copyable-message-box code {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-heading);
+}
+.copy-message-btn {
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+.copy-message-btn:hover {
+  color: var(--color-primary);
+}
+
+.warning-note {
+  background: rgba(244, 63, 94, 0.08);
+  border-left: 3px solid var(--color-accent);
+  color: var(--text-heading);
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.qr-actions-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 18px;
+  @media (max-width: 576px) {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+}
+.qr-actions-row button {
+  @media (max-width: 576px) {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ========================================================
+   MOBILE & TABLET RESPONSIVE REFINEMENTS
+   ======================================================== */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 16px;
+  }
+  .logo-text {
+    font-size: 1.25rem;
+  }
+  .nav-search-bar {
+    max-width: 220px;
+  }
+  .nav-search-bar input {
+    height: 38px;
+    font-size: 0.82rem;
+    padding-left: 36px;
+  }
+  .search-icon {
+    left: 10px;
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo-text {
+    display: none; /* Hide logo text to give space on mobile */
+  }
+  .user-name-text {
+    display: none; /* Hide username text, only keep avatar */
+  }
+  .user-profile-trigger {
+    padding: 4px;
+  }
+  .nav-search-bar {
+    max-width: 180px;
+  }
+  .nav-actions {
+    gap: 8px;
+  }
+  .nav-action-btn {
+    width: 36px;
+    height: 36px;
+  }
+  
+  /* Hero section mobile adjustments */
+  .hero-section {
+    padding: 30px 0;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-description {
+    font-size: 0.9rem;
+  }
+  .floating-card {
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  /* Details Modal mobile adjustments */
+  .modal-content {
+    padding: 16px;
+    max-height: 95vh;
+  }
+  .details-image-area {
+    height: 250px;
+  }
+  .details-title {
+    font-size: 1.4rem;
+  }
+  .details-current-price {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr; /* Force 1 column grid for narrow mobile screens */
+    gap: 20px;
+  }
+  .container-width {
+    padding: 0 16px; /* Decrease side margins to gain content space on small viewports */
+  }
+  .catalog-header h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav-search-bar {
+    max-width: 130px;
+  }
+  .nav-search-bar input {
+    padding-left: 28px;
+    font-size: 0.78rem;
+  }
+  .search-icon {
+    display: none; /* Hide search icon to save input space */
+  }
+  .category-tab-btn {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+}
+
+
+

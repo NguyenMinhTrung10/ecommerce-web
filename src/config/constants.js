@@ -21,3 +21,10 @@ export const PROMO_CODES = {
     label: "Mã giảm giá đặc biệt từ Antigravity giảm 20%"
   }
 };
+
+export const MERCHANT_CONFIG = {
+  BANK_ID: "MB",               // MB (Ngân hàng Quân Đội), Vietcombank (VCB), Techcombank (TCB)...
+  ACCOUNT_NUMBER: "0123456789", // Số tài khoản ngân hàng của bạn nhận tiền
+  ACCOUNT_NAME: "NGUYEN VAN A"  // Tên chủ tài khoản viết hoa không dấu
+};
+
